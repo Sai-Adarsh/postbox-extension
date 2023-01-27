@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Postbox - Store LinkedIn connection request templates",
+  "description": "Chrome extension to store LinkedIn connection request templates",
+  "version": "0.0.1",
+  "icons": {
+    "16": "logo/logo-16.png",
+    "48": "logo/logo-48.png",
+    "128": "logo/logo-128.png"
+  },
+  "action": {
+    "default_title": "Postbox - Store LinkedIn connection request templates"
+  },
+  "permissions": ["storage", "declarativeContent", "activeTab", "scripting"],
+  "host_permissions": ["*://*/*"],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["index.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+U",
+        "mac": "Command+U"
+      }
+    }
+  }
+}
